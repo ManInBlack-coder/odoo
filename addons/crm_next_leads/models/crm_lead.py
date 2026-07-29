@@ -12,7 +12,7 @@ class CrmLead(models.Model):
 
     def _compute_next_lead_partner_ids(self):
         # A partner counts as "already associated with a lead" even if that lead
-        # was later marked as Lost (active=False) - see doc/design_decisions.rst.
+        # was later marked as Lost (active=False) - see doc/design_decisions.md.
         lead_data = self.env['crm.lead'].with_context(active_test=False)._read_group(
             domain=[('partner_id', '!=', False)],
             groupby=['partner_id'],
