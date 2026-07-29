@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="cmr_lead_view_from_inherit_next_leads" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit.next.leads</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='lead']" position="after">
+                <page name="next_leads" string="Next Leads">
+                    <field name="next_lead_partner_ids">
+                        <tree create="false" edit="false" delete="false">
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <button name="action_create_lead_from_partner" type="object" string="Create Lead" icon="fa-plus"/>
+                        </tree>
+                    </field>
+                </page>
+             </xpath>
+        </field>
+
+    </record>
+ 
+ </odoo>
