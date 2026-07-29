@@ -1,4 +1,5 @@
 {
+    'name': 'CRM_NEXT_LEADS',
     'depends': [
         'crm'
     ],
