@@ -1,4 +1,4 @@
-# Builds Odoo 19.0 from this local checkout for local development with Docker.
+# Builds Odoo 17.0 from this local checkout for local development with Docker.
 FROM python:3.12-slim-bookworm
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
