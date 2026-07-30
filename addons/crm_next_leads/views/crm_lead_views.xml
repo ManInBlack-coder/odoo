@@ -8,10 +8,13 @@
             <xpath expr="//page[@name='lead']" position="after">
                 <page name="next_leads" string="Next Leads">
                     <field name="next_lead_partner_ids">
-                        <tree create="false" edit="false" delete="false">
+                        <tree create="false" edit="false" delete="false"
+                              decoration-muted="not last_lead_create_date"
+                              decoration-warning="last_lead_create_date">
                             <field name="name"/>
                             <field name="email"/>
                             <field name="phone"/>
+                            <field name="last_lead_create_date" invisible="1"/>
                             <button name="action_create_lead_from_partner" type="object" string="Create Lead" icon="fa-plus"/>
                         </tree>
                     </field>
